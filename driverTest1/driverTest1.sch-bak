@@ -980,6 +980,21 @@ Text GLabel 2750 6050 2    50   Input ~ 0
 DAC
 Wire Wire Line
 	7600 1950 7850 1950
+Wire Wire Line
+	7850 2400 7700 2400
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5F33278C
+P 6300 2350
+F 0 "TP1" H 6358 2468 50  0000 L CNN
+F 1 "FB" H 6358 2377 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 6500 2350 50  0001 C CNN
+F 3 "~" H 6500 2350 50  0001 C CNN
+	1    6300 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 2350 6300 2500
 $Comp
 L power:GND #PWR0131
 U 1 1 5F329A72
@@ -991,19 +1006,16 @@ F 3 "" H 7850 2400 50  0001 C CNN
 	1    7850 2400
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7850 2400 7700 2400
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5F33278C
-P 6300 2350
-F 0 "TP?" H 6358 2468 50  0000 L CNN
-F 1 "FB" H 6358 2377 50  0000 L CNN
-F 2 "" H 6500 2350 50  0001 C CNN
-F 3 "~" H 6500 2350 50  0001 C CNN
-	1    6300 2350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6300 2350 6300 2500
+Wire Notes Line
+	7750 1850 7750 2500
+Wire Notes Line
+	7750 2500 8200 2500
+Wire Notes Line
+	8200 2500 8200 1850
+Wire Notes Line
+	8200 1850 7750 1850
+Text Notes 7750 1550 0    50   ~ 0
+Connect these two grounds together first and then via a single point to the rest\nof the ground. The bottom ground should be connected directly to the pad of the\nsense resistor.
+Wire Notes Line
+	7950 1800 7950 1600
 $EndSCHEMATC

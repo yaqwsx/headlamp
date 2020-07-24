@@ -202,12 +202,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0105
 U 1 1 5F1D53F5
-P 7850 1950
-F 0 "#PWR0105" H 7850 1700 50  0001 C CNN
-F 1 "GND" V 7855 1822 50  0000 R CNN
-F 2 "" H 7850 1950 50  0001 C CNN
-F 3 "" H 7850 1950 50  0001 C CNN
-	1    7850 1950
+P 8050 1950
+F 0 "#PWR0105" H 8050 1700 50  0001 C CNN
+F 1 "GND" V 8055 1822 50  0000 R CNN
+F 2 "" H 8050 1950 50  0001 C CNN
+F 3 "" H 8050 1950 50  0001 C CNN
+	1    8050 1950
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -224,12 +224,12 @@ $EndComp
 $Comp
 L Device:R R8
 U 1 1 5F1D8F6D
-P 7550 2400
-F 0 "R8" V 7450 2400 50  0000 C CNN
-F 1 "R" V 7550 2400 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7480 2400 50  0001 C CNN
-F 3 "~" H 7550 2400 50  0001 C CNN
-	1    7550 2400
+P 7450 2400
+F 0 "R8" V 7350 2400 50  0000 C CNN
+F 1 "R" V 7450 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7380 2400 50  0001 C CNN
+F 3 "~" H 7450 2400 50  0001 C CNN
+	1    7450 2400
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -238,7 +238,7 @@ Connection ~ 7250 1950
 Wire Wire Line
 	7250 1950 7100 1950
 Wire Wire Line
-	7400 2400 7250 2400
+	7300 2400 7250 2400
 Wire Wire Line
 	7250 2400 7250 2350
 Wire Wire Line
@@ -365,9 +365,9 @@ $EndComp
 Wire Wire Line
 	8500 3200 8300 3200
 Wire Wire Line
-	8300 3200 8300 2600
+	8300 3200 8400 2600
 Wire Wire Line
-	8300 2600 8450 2600
+	8400 2600 8450 2600
 $Comp
 L Amplifier_Operational:MCP602 U2
 U 3 1 5F1AF1B1
@@ -478,12 +478,12 @@ Wire Wire Line
 Wire Wire Line
 	10050 1950 9550 1950
 Wire Wire Line
-	9250 1950 8300 1950
+	9250 1950 8400 1950
 Wire Wire Line
-	8300 1950 8300 2600
-Connection ~ 8300 2600
+	8400 1950 8400 2600
+Connection ~ 8400 2600
 Wire Wire Line
-	8300 2600 8100 2600
+	8400 2600 8100 2600
 Wire Wire Line
 	8100 2600 8100 3500
 Connection ~ 8100 2600
@@ -978,21 +978,6 @@ Text GLabel 2250 6050 0    50   Input ~ 0
 DAC
 Text GLabel 2750 6050 2    50   Input ~ 0
 DAC
-Wire Wire Line
-	7600 1950 7850 1950
-$Comp
-L power:GND #PWR0131
-U 1 1 5F329A72
-P 7850 2400
-F 0 "#PWR0131" H 7850 2150 50  0001 C CNN
-F 1 "GND" V 7855 2272 50  0000 R CNN
-F 2 "" H 7850 2400 50  0001 C CNN
-F 3 "" H 7850 2400 50  0001 C CNN
-	1    7850 2400
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7850 2400 7700 2400
 $Comp
 L Connector:TestPoint TP1
 U 1 1 5F33278C
@@ -1006,4 +991,32 @@ F 3 "~" H 6500 2350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6300 2350 6300 2500
+Text Notes 7500 1550 0    50   ~ 0
+Connect these two grounds together first and then via a single point to the rest\nof the ground. The bottom ground should be connected directly to the pad of the\nsense resistor.
+$Comp
+L Device:Net-Tie_2 NT?
+U 1 1 5F3732B0
+P 7850 1950
+F 0 "NT?" H 7850 2131 50  0000 C CNN
+F 1 "SenseTie" H 7850 2040 50  0000 C CNN
+F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 7850 1950 50  0001 C CNN
+F 3 "~" H 7850 1950 50  0001 C CNN
+	1    7850 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 2400 7600 1950
+Connection ~ 7600 1950
+Wire Wire Line
+	7600 1950 7750 1950
+Wire Wire Line
+	8050 1950 7950 1950
+Wire Notes Line
+	7500 2450 8350 2450
+Wire Notes Line
+	8350 2450 8350 1600
+Wire Notes Line
+	8350 1600 7500 1600
+Wire Notes Line
+	7500 1600 7500 2450
 $EndSCHEMATC
