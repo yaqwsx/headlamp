@@ -323,24 +323,24 @@ $EndComp
 $Comp
 L Device:C C1
 U 1 1 5F22F6F4
-P 1550 2350
-F 0 "C1" H 1435 2304 50  0000 R CNN
-F 1 "100n" H 1435 2395 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 1588 2200 50  0001 C CNN
-F 3 "~" H 1550 2350 50  0001 C CNN
-F 4 "C14663" H 1550 2350 50  0001 C CNN "LCSC"
-	1    1550 2350
+P 950 2350
+F 0 "C1" H 835 2304 50  0000 R CNN
+F 1 "100n" H 835 2395 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 988 2200 50  0001 C CNN
+F 3 "~" H 950 2350 50  0001 C CNN
+F 4 "C14663" H 950 2350 50  0001 C CNN "LCSC"
+	1    950  2350
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0119
 U 1 1 5F231734
-P 1550 2500
-F 0 "#PWR0119" H 1550 2250 50  0001 C CNN
-F 1 "GND" H 1555 2327 50  0000 C CNN
-F 2 "" H 1550 2500 50  0001 C CNN
-F 3 "" H 1550 2500 50  0001 C CNN
-	1    1550 2500
+P 950 2500
+F 0 "#PWR0119" H 950 2250 50  0001 C CNN
+F 1 "GND" H 955 2327 50  0000 C CNN
+F 2 "" H 950 2500 50  0001 C CNN
+F 3 "" H 950 2500 50  0001 C CNN
+	1    950  2500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -352,15 +352,6 @@ Wire Wire Line
 Connection ~ 4350 2550
 Wire Wire Line
 	4350 2550 4300 2550
-Wire Wire Line
-	3350 2200 3100 2200
-Wire Wire Line
-	3350 2450 3100 2450
-Wire Wire Line
-	3100 2450 3100 2200
-Connection ~ 3100 2200
-Wire Wire Line
-	3100 2200 1550 2200
 Wire Wire Line
 	3350 2550 3250 2550
 Text GLabel 3200 2550 0    50   Input ~ 0
@@ -383,24 +374,24 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0120
 U 1 1 5F27EE89
-P 2350 2650
-F 0 "#PWR0120" H 2350 2400 50  0001 C CNN
-F 1 "GND" H 2355 2477 50  0000 C CNN
-F 2 "" H 2350 2650 50  0001 C CNN
-F 3 "" H 2350 2650 50  0001 C CNN
-	1    2350 2650
+P 1800 2650
+F 0 "#PWR0120" H 1800 2400 50  0001 C CNN
+F 1 "GND" H 1805 2477 50  0000 C CNN
+F 2 "" H 1800 2650 50  0001 C CNN
+F 3 "" H 1800 2650 50  0001 C CNN
+	1    1800 2650
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R2
 U 1 1 5F27F1FA
-P 2350 2500
-F 0 "R2" H 2420 2546 50  0000 L CNN
-F 1 "120k" H 2420 2455 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2280 2500 50  0001 C CNN
-F 3 "~" H 2350 2500 50  0001 C CNN
-F 4 "C25808" H 2350 2500 50  0001 C CNN "LCSC"
-	1    2350 2500
+P 1800 2500
+F 0 "R2" H 1870 2546 50  0000 L CNN
+F 1 "120k" H 1870 2455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1730 2500 50  0001 C CNN
+F 3 "~" H 1800 2500 50  0001 C CNN
+F 4 "C25808" H 1800 2500 50  0001 C CNN "LCSC"
+	1    1800 2500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -414,13 +405,11 @@ F 3 "" H 3250 2850 50  0001 C CNN
 	1    3250 2850
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	2350 2350 3350 2350
-Text GLabel 2250 2350 0    50   Input ~ 0
+Text GLabel 1700 2350 0    50   Input ~ 0
 ENABLE
 Wire Wire Line
-	2250 2350 2350 2350
-Connection ~ 2350 2350
+	1700 2350 1800 2350
+Connection ~ 1800 2350
 Wire Wire Line
 	3700 1550 3600 1550
 Connection ~ 3600 1550
@@ -616,17 +605,6 @@ Text GLabel 1950 7150 0    50   Input ~ 0
 PWM
 Text Notes 7950 1700 0    50   ~ 0
 Connect these two grounds together first and then via a single point to the rest\nof the ground. The bottom ground should be connected directly to the pad of the\nsense resistor.
-$Comp
-L Device:Net-Tie_2 NT1
-U 1 1 5F3732B0
-P 8850 1950
-F 0 "NT1" H 8850 2131 50  0000 C CNN
-F 1 "SenseTie" H 8850 2040 50  0000 C CNN
-F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 8850 1950 50  0001 C CNN
-F 3 "~" H 8850 1950 50  0001 C CNN
-	1    8850 1950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9100 1950 8950 1950
 Wire Wire Line
@@ -664,26 +642,26 @@ Wire Wire Line
 $Comp
 L Amplifier_Operational:LM324 U2
 U 1 1 5F35AF0D
-P 7550 2750
-F 0 "U2" V 7500 3100 50  0000 R CNN
-F 1 "TPH2504-SR" V 7600 3400 50  0000 R CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7500 2850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7600 2950 50  0001 C CNN
-F 4 "C115918" H 7550 2750 50  0001 C CNN "LCSC"
-	1    7550 2750
-	0    -1   1    0   
+P 6100 3200
+F 0 "U2" V 6050 3550 50  0000 R CNN
+F 1 "TPH2504-SR" V 6150 3850 50  0000 R CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6050 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6150 3400 50  0001 C CNN
+F 4 "C115918" H 6100 3200 50  0001 C CNN "LCSC"
+	1    6100 3200
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:LM324 U2
 U 2 1 5F35C47E
-P 6100 3200
-F 0 "U2" H 6100 3567 50  0000 C CNN
-F 1 "TPH2504-SR" H 6100 3476 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6050 3300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6150 3400 50  0001 C CNN
-F 4 "C115918" H 6100 3200 50  0001 C CNN "LCSC"
-	2    6100 3200
-	-1   0    0    -1  
+P 5850 4900
+F 0 "U2" H 5850 5200 50  0000 C CNN
+F 1 "TPH2504-SR" H 6050 5100 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5800 5000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5900 5100 50  0001 C CNN
+F 4 "C115918" H 5850 4900 50  0001 C CNN "LCSC"
+	2    5850 4900
+	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:LM324 U2
@@ -696,18 +674,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7050 4500 50  0001 C CNN
 F 4 "C115918" H 7000 4300 50  0001 C CNN "LCSC"
 	3    7000 4300
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Amplifier_Operational:LM324 U2
-U 4 1 5F35F1E1
-P 5850 4900
-F 0 "U2" H 5900 5200 50  0000 C CNN
-F 1 "TPH2504-SR" H 6050 5100 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5800 5000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5900 5100 50  0001 C CNN
-F 4 "C115918" H 5850 4900 50  0001 C CNN "LCSC"
-	4    5850 4900
-	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:LM324 U2
@@ -825,7 +791,6 @@ F 4 "C22984" H 7550 3250 50  0001 C CNN "LCSC"
 	1    7550 3250
 	1    0    0    -1  
 $EndComp
-Connection ~ 7550 3050
 Wire Wire Line
 	7550 3450 7350 3450
 Wire Wire Line
@@ -1309,4 +1274,89 @@ Wire Wire Line
 Connection ~ 7900 1950
 Wire Wire Line
 	7900 1950 8050 1950
+$Comp
+L Device:Net-Tie_2 NT1
+U 1 1 5F3732B0
+P 8850 1950
+F 0 "NT1" H 8850 2131 50  0000 C CNN
+F 1 "SenseTie" H 8850 2040 50  0000 C CNN
+F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 8850 1950 50  0001 C CNN
+F 3 "~" H 8850 1950 50  0001 C CNN
+	1    8850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM324 U2
+U 4 1 5F35F1E1
+P 7550 2750
+F 0 "U2" H 7600 3050 50  0000 C CNN
+F 1 "TPH2504-SR" H 7750 2950 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7500 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 7600 2950 50  0001 C CNN
+F 4 "C115918" H 7550 2750 50  0001 C CNN "LCSC"
+	4    7550 2750
+	0    -1   1    0   
+$EndComp
+Connection ~ 7550 3050
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5F812976
+P 1300 5050
+F 0 "H3" H 1400 5096 50  0000 L CNN
+F 1 "MountingHole" H 1400 5005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1300 5050 50  0001 C CNN
+F 3 "~" H 1300 5050 50  0001 C CNN
+	1    1300 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5F812F86
+P 1300 5250
+F 0 "H4" H 1400 5296 50  0000 L CNN
+F 1 "MountingHole" H 1400 5205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1300 5250 50  0001 C CNN
+F 3 "~" H 1300 5250 50  0001 C CNN
+	1    1300 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5F815CE7
+P 1300 4600
+F 0 "H1" H 1400 4646 50  0000 L CNN
+F 1 "MountingHole" H 1400 4555 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1300 4600 50  0001 C CNN
+F 3 "~" H 1300 4600 50  0001 C CNN
+	1    1300 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5F815CED
+P 1300 4800
+F 0 "H2" H 1400 4846 50  0000 L CNN
+F 1 "MountingHole" H 1400 4755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 1300 4800 50  0001 C CNN
+F 3 "~" H 1300 4800 50  0001 C CNN
+	1    1300 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  2200 3350 2200
+Wire Wire Line
+	1800 2350 3350 2350
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F85B2BF
+P 2300 2450
+F 0 "#PWR?" H 2300 2300 50  0001 C CNN
+F 1 "+3.3V" H 2315 2623 50  0000 C CNN
+F 2 "" H 2300 2450 50  0001 C CNN
+F 3 "" H 2300 2450 50  0001 C CNN
+	1    2300 2450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2300 2450 3350 2450
 $EndSCHEMATC
