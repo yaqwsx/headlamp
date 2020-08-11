@@ -302,6 +302,7 @@ F 1 "100u" H 8268 3255 50  0000 L CNN
 F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B" H 8188 3150 50  0001 C CNN
 F 3 "~" H 8150 3300 50  0001 C CNN
 F 4 "C16133" H 8150 3300 50  0001 C CNN "LCSC"
+F 5 "0;0;180" H 8150 3300 50  0001 C CNN "JLCPCB_CORRECTION"
 	1    8150 3300
 	1    0    0    -1  
 $EndComp
@@ -738,6 +739,7 @@ F 1 "100u" H 1832 1995 50  0000 R CNN
 F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B" H 1988 1800 50  0001 C CNN
 F 3 "~" H 1950 1950 50  0001 C CNN
 F 4 "C16133" H 1950 1950 50  0001 C CNN "LCSC"
+F 5 "0;0;180" H 1950 1950 50  0001 C CNN "JLCPCB_CORRECTION"
 	1    1950 1950
 	-1   0    0    1   
 $EndComp
@@ -778,6 +780,50 @@ F 1 "IO" H 3900 5076 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 3850 4750 50  0001 C CNN
 F 3 "~" H 3850 4750 50  0001 C CNN
 	1    3850 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5F3F008F
+P 9500 4500
+F 0 "H1" H 9600 4546 50  0000 L CNN
+F 1 "MountingHole" H 9600 4455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9500 4500 50  0001 C CNN
+F 3 "~" H 9500 4500 50  0001 C CNN
+	1    9500 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5F3F04F5
+P 9500 4700
+F 0 "H2" H 9600 4746 50  0000 L CNN
+F 1 "MountingHole" H 9600 4655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9500 4700 50  0001 C CNN
+F 3 "~" H 9500 4700 50  0001 C CNN
+	1    9500 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5F3F061B
+P 9500 4900
+F 0 "H3" H 9600 4946 50  0000 L CNN
+F 1 "MountingHole" H 9600 4855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9500 4900 50  0001 C CNN
+F 3 "~" H 9500 4900 50  0001 C CNN
+	1    9500 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5F3F086C
+P 9500 5100
+F 0 "H4" H 9600 5146 50  0000 L CNN
+F 1 "MountingHole" H 9600 5055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 9500 5100 50  0001 C CNN
+F 3 "~" H 9500 5100 50  0001 C CNN
+	1    9500 5100
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
